@@ -1,0 +1,103 @@
+let projects = [
+  {
+    name: "Conduit Blog App",
+    details:
+      "Conduit Blog App is a Platform where people can share thier thought and articles and can interact with each others post.",
+    link: "/conduit-blog",
+    image: "/images/projects/conduit-mbp.png",
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TailwindCSS",
+      "React",
+      "ExpressJS",
+      "NodeJS",
+      "MongoDB",
+    ],
+  },
+  {
+    name: "Shopping Cart App",
+    details:
+      "A Simple shopping cart application made using react where people can sort items according to sizes and price and can add itmes to cart.",
+    link: "/shopping-cart",
+    image: "/images/projects/shop-cart-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "SASS/SCSS", "React"],
+  },
+  {
+    name: "Github Battle",
+    details:
+      "An open, extensible, platform for github users to track top repositories of various programming languages.",
+    link: "/github-battle",
+    image: "/images/projects/gb-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "SASS/SCSS", "React"],
+  },
+  {
+    name: "Quiz App",
+    details: "",
+    link: "",
+    image: "/images/projects/quiz-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    name: "Castillo - The Podcast App",
+    details: "",
+    link: "",
+    image: "/images/projects/castillo-mbp.png",
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TailwindCSS",
+      "EJS",
+      "ExpressJS",
+      "NodeJS",
+      "MongoDB",
+    ],
+  },
+  {
+    name: "Trakr - Expense Tracker App",
+    details: "",
+    link: "",
+    image: "/images/projects/trakr-mbp.png",
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TailwindCSS",
+      "EJS",
+      "ExpressJS",
+      "NodeJS",
+      "MongoDB",
+    ],
+  },
+  {
+    name: "Monthly Activity Tracker",
+    details: "",
+    link: "",
+    image: "/images/projects/mat-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    name: "HTML CSS Live Code Editor",
+    details: "",
+    link: "",
+    image: "/images/projects/code-editor-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    name: "MovieXone - Movies App",
+    details: "",
+    link: "",
+    image: "/images/projects/movie-mbp.png",
+    tools: ["HTML", "CSS", "JavaScript", "React"],
+  },
+  {
+    name: "Todo App",
+    details: "",
+    link: "",
+    image: "",
+    tools: ["HTML", "CSS", "JavaScript"],
+  },
+];
+export default projects;
