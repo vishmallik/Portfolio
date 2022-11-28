@@ -41,7 +41,7 @@ let skills = [
     logo: "/images/express.png",
   },
   {
-    name: "MongoDB/Mongoose ORM",
+    name: "MongoDB",
     logo: "/images/mongo.png",
   },
   {

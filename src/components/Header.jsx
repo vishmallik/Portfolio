@@ -1,19 +1,46 @@
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 function Header() {
+  let [menu, setMenu] = useState(false);
   return (
     <div className=" drop-shadow-2xl bg-white fixed left-0 right-0 z-10">
-      <header className="container mx-auto flex justify-between items-center py-6 ">
-        <a href="/" className="flex justify-between items-center">
+      <header className="container mx-auto flex justify-between items-center py-5 lg:py-6 px-4  ">
+        <a href="/" className="">
           <img
             src="/pic.jpg"
             alt="vishmallik"
-            className="w-10 h-10 rounded-full"
+            className="w-10 h-10 rounded-full inline-block"
           />
-          <h1 className="font-extrabold px-4">VISAWJEET MALLIK</h1>
+          <h1 className="font-extrabold px-4 text-sm lg:text-md inline-block align-middle">
+            VISAWJEET MALLIK
+          </h1>
         </a>
-        <nav className="w-1/4">
-          <ul className="flex justify-between items-center basis-1/2 text-lg font-bold ">
-            <li className="hover:text-lime-400 tracking-wide">
+        <nav className="lg:basis-1/3">
+          {menu ? (
+            <i
+              className="fas fa-xmark lg:hidden text-left"
+              onClick={() => setMenu(false)}
+            ></i>
+          ) : (
+            <i
+              className="fas fa-bars lg:hidden text-left"
+              onClick={() => setMenu(true)}
+            ></i>
+          )}
+          <ul
+            className={`lg:flex lg:justify-between items-center basis-1/2 text-lg font-bold ${
+              menu
+                ? "flex flex-col bg-lime-100  justify-start absolute left-0 right-0 top-20"
+                : "hidden"
+            }`}
+          >
+            <li
+              className={`hover:text-lime-400 tracking-wide ${
+                menu ? "text-lg py-6" : ""
+              }`}
+              onClick={() => setMenu(false)}
+            >
               <NavHashLink
                 to="/#hero"
                 smooth
@@ -23,7 +50,12 @@ function Header() {
                 HOME
               </NavHashLink>
             </li>
-            <li className="hover:text-lime-400 tracking-wide">
+            <li
+              className={`hover:text-lime-400 tracking-wide ${
+                menu ? "text-lg py-6" : ""
+              }`}
+              onClick={() => setMenu(false)}
+            >
               <NavHashLink
                 to="/#about"
                 smooth
@@ -33,17 +65,27 @@ function Header() {
                 ABOUT
               </NavHashLink>
             </li>
-            <li className="hover:text-lime-400 tracking-wide">
-              <NavHashLink
-                to="/#projects"
+            <li
+              className={`hover:text-lime-400 tracking-wide ${
+                menu ? "text-lg py-6" : ""
+              }`}
+              onClick={() => setMenu(false)}
+            >
+              <NavLink
+                to="/projects"
                 smooth
                 activeClassName="border-b-2 border-solid border-lime-400 "
                 className="pb-2"
               >
                 PROJECTS
-              </NavHashLink>
+              </NavLink>
             </li>
-            <li className="hover:text-lime-400 tracking-wide">
+            <li
+              className={`hover:text-lime-400 tracking-wide ${
+                menu ? "text-lg py-6" : ""
+              }`}
+              onClick={() => setMenu(false)}
+            >
               <NavHashLink
                 to="/#contact"
                 smooth

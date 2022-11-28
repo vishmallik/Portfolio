@@ -3,20 +3,20 @@ import { HashLink } from "react-router-hash-link";
 function Hero() {
   return (
     <div
-      className="text-center py-64 bg-no-repeat bg-cover relative"
+      className="text-center lg:py-64 pt-44 pb-22 bg-no-repeat bg-cover relative"
       id="hero"
       style={{
         background: `url("/hero.jpg")`,
       }}
     >
       <div className="container mx-auto">
-        <h1 className="font-extrabold  text-6xl tracking-widest">
+        <h1 className="font-extrabold lg:text-6xl text-5xl tracking-widest">
           <strong className="text-lime-400">HI,</strong> I AM VISAWJEET MALLIK
         </h1>
-        <h2 className="font-bold text-4xl py-10 tracking-wider">
+        <h2 className="font-bold lg:text-4xl text-3xl py-10 tracking-wider px-4">
           A Full Stack Web Developer
         </h2>
-        <p className="w-3/4  mx-auto text-xl tracking-wide">
+        <p className="lg:w-3/4  mx-4 lg:mx-auto text-lg lg:text-xl tracking-wide">
           Proficient in MERN stack development, passionate about implementing
           and launching new projects, I have the ability to translate business
           requirements into technical solutions. Currently I am looking to start
@@ -24,12 +24,12 @@ function Hero() {
           driven by technology.
         </p>
         <HashLink to="/#projects" smooth>
-          <button className="rounded-md py-4 px-12  bg-lime-300 text-lg font-extrabold my-16 tracking-widest drop-shadow-xl">
+          <button className="rounded-md py-4 px-12 bg-lime-300 text-md lg:text-lg font-extrabold my-16 tracking-widest drop-shadow-xl">
             PROJECTS
           </button>
         </HashLink>
       </div>
-      <div className="flex flex-col absolute left-0 top-1/3 bg-white p-2 rounded-md drop-shadow-lg">
+      <div className="hidden lg:flex lg:flex-col absolute lg:left-0 lg:top-1/3 bg-white p-2 rounded-md drop-shadow-lg">
         <a href="https://www.github.com/vishmallik">
           <i className="fab fa-github text-4xl px-2 hover:text-lime-400 cursor-pointer my-2"></i>
         </a>
