@@ -143,7 +143,7 @@ function Contact() {
           <input
             type="submit"
             value="SUBMIT"
-            className={`rounded-md py-4 px-12  bg-lime-300 text-md lg:text-lg font-extrabold my-6 tracking-widest ${
+            className={`rounded-md py-4 px-12  bg-lime-300 text-md lg:text-lg font-extrabold my-6 tracking-widest cursor-pointer ${
               darkMode ? "shadow-none" : "drop-shadow-xl"
             }`}
           />
