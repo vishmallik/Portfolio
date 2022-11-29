@@ -14,4 +14,21 @@
   .border-thin {
     border-width: 0.1%;
   }
+  .dark {
+    background-color: rgb(34, 33, 33);
+    color: white;
+  }
+  .bg-violet-invert {
+    background-color: rgb(65, 13, 155);
+  }
+  .border-violet-invert {
+    border-color: rgb(65, 13, 155);
+  }
+  .text-violet-invert {
+    color: rgb(65, 13, 155);
+  }
+  .about-dark {
+    background-color: rgb(8, 1, 24) !important;
+    color: white;
+  }
 }

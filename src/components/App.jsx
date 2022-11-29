@@ -7,12 +7,14 @@ import ProjectSection from "./ProjectSection";
 import { BrowserRouter, Route } from "react-router-dom";
 import Projects from "./Projects";
 import ThemeContext from "../context/ThemeContext";
+import { useState } from "react";
 
 function App() {
+  let [darkMode, setDarkMode] = useState(false);
   return (
     <div className="relative">
       <BrowserRouter>
-        <ThemeContext.Provider>
+        <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
           <Header />
           <Route path="/" exact>
             <Hero />

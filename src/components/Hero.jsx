@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { HashLink } from "react-router-hash-link";
+import ThemeContext from "../context/ThemeContext";
 
 function Hero() {
+  let { darkMode } = useContext(ThemeContext);
   return (
     <div
-      className="text-center lg:py-64 pt-44 pb-22 bg-no-repeat bg-cover relative"
+      className={`text-center lg:py-64 pt-44 pb-22 bg-no-repeat  bg-cover relative ${
+        darkMode && "invert"
+      }`}
       id="hero"
       style={{
         background: `url("/hero.jpg")`,
@@ -24,7 +29,11 @@ function Hero() {
           driven by technology.
         </p>
         <HashLink to="/#projects" smooth>
-          <button className="rounded-md py-4 px-12 bg-lime-300 text-md lg:text-lg font-extrabold my-16 tracking-widest drop-shadow-xl">
+          <button
+            className={`rounded-md py-4 px-12 bg-lime-300 text-md lg:text-lg font-extrabold my-16 tracking-widest ${
+              darkMode ? "shadow-none" : "drop-shadow-xl"
+            }`}
+          >
             PROJECTS
           </button>
         </HashLink>

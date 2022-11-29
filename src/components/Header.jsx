@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
+import ThemeContext from "../context/ThemeContext";
 function Header() {
   let [menu, setMenu] = useState(false);
+  let { darkMode, setDarkMode } = useContext(ThemeContext);
   return (
-    <div className=" drop-shadow-2xl bg-white fixed left-0 right-0 z-10">
-      <header className="container mx-auto flex justify-between items-center py-5 lg:py-6 px-4  ">
+    <div
+      className={`drop-shadow-2xl ${
+        darkMode ? "dark" : "bg-white "
+      } fixed left-0 right-0 z-10`}
+    >
+      <header className="container mx-auto flex justify-between  items-center py-5 lg:py-6 px-4  ">
         <a href="/" className="">
           <img
             src="/pic.jpg"
@@ -31,69 +37,97 @@ function Header() {
           <ul
             className={`lg:flex lg:justify-between items-center basis-1/2 text-lg font-bold ${
               menu
-                ? "flex flex-col bg-lime-100  justify-start absolute left-0 right-0 top-20"
+                ? `flex flex-col ${
+                    darkMode ? "bg-gray-900" : "bg-lime-100"
+                  }  justify-start absolute left-0 right-0 top-20`
                 : "hidden"
             }`}
           >
             <li
-              className={`hover:text-lime-400 tracking-wide ${
-                menu ? "text-lg py-6" : ""
-              }`}
+              className={`${
+                darkMode ? "hover:text-violet-600" : "hover:text-lime-400"
+              } tracking-wide ${menu && "text-lg py-6"}`}
               onClick={() => setMenu(false)}
             >
               <NavHashLink
                 to="/#hero"
                 smooth
-                activeClassName="border-b-2 border-solid border-lime-400 "
+                activeClassName={`border-b-2 border-solid ${
+                  darkMode ? "border-violet-600" : "border-lime-400"
+                }`}
                 className="pb-2"
               >
                 HOME
               </NavHashLink>
             </li>
             <li
-              className={`hover:text-lime-400 tracking-wide ${
-                menu ? "text-lg py-6" : ""
-              }`}
+              className={`${
+                darkMode ? "hover:text-violet-600" : "hover:text-lime-400"
+              } tracking-wide ${menu && "text-lg py-6"}`}
               onClick={() => setMenu(false)}
             >
               <NavHashLink
                 to="/#about"
                 smooth
-                activeClassName="border-b-2 border-solid border-lime-400 "
+                activeClassName={`border-b-2 border-solid ${
+                  darkMode ? "border-violet-600" : "border-lime-400"
+                }`}
                 className="pb-2"
               >
                 ABOUT
               </NavHashLink>
             </li>
             <li
-              className={`hover:text-lime-400 tracking-wide ${
-                menu ? "text-lg py-6" : ""
-              }`}
+              className={`${
+                darkMode ? "hover:text-violet-600" : "hover:text-lime-400"
+              } tracking-wide ${menu && "text-lg py-6"}`}
               onClick={() => setMenu(false)}
             >
               <NavLink
                 to="/projects"
-                smooth
-                activeClassName="border-b-2 border-solid border-lime-400 "
+                activeClassName={`border-b-2 border-solid ${
+                  darkMode ? "border-violet-600" : "border-lime-400"
+                }`}
                 className="pb-2"
               >
                 PROJECTS
               </NavLink>
             </li>
             <li
-              className={`hover:text-lime-400 tracking-wide ${
-                menu ? "text-lg py-6" : ""
-              }`}
+              className={`${
+                darkMode ? "hover:text-violet-invert" : "hover:text-lime-400"
+              } tracking-wide ${menu && "text-lg py-6"}`}
               onClick={() => setMenu(false)}
             >
               <NavHashLink
                 to="/#contact"
                 smooth
-                activeClassName="border-b-2 border-solid border-lime-400 "
+                activeClassName={`border-b-2 border-solid ${
+                  darkMode ? "border-violet-600" : "border-lime-400"
+                }`}
                 className="pb-2"
               >
                 CONTACT
               </NavHashLink>
+            </li>
+            <li className={`${menu && "text-lg py-6 pb-10"}`}>
+              {darkMode ? (
+                <i
+                  className="fas fa-sun w-10 cursor-pointer hover:text-violet-600 text-center block"
+                  onClick={() => {
+                    setDarkMode(false);
+                    setMenu(false);
+                  }}
+                ></i>
+              ) : (
+                <i
+                  className="fas fa-moon w-10 cursor-pointer hover:text-lime-400 text-center block"
+                  onClick={() => {
+                    setDarkMode(true);
+                    setMenu(true);
+                  }}
+                ></i>
+              )}
             </li>
           </ul>
         </nav>

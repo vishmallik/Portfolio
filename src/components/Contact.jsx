@@ -1,4 +1,5 @@
-import { useReducer } from "react";
+import { useContext, useReducer } from "react";
+import ThemeContext from "../context/ThemeContext";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -28,11 +29,12 @@ function Contact() {
     email: "",
     message: "",
   });
+  let { darkMode } = useContext(ThemeContext);
 
   return (
     <div
       style={{ background: "url('contact.jpg')" }}
-      className="bg-no-repeat bg-cover "
+      className={`bg-no-repeat bg-cover ${darkMode && "invert"}`}
       id="contact"
     >
       <div className="container mx-auto text-center py-24">
@@ -40,7 +42,11 @@ function Contact() {
           CONTACT
         </h2>
         <hr className="border-2 border-solid border-lime-400 rounded-full w-16 mx-auto" />
-        <p className="text-gray-500 text-lg lg:text-xl lg:w-1/2 mx-6 lg:mx-auto py-6 lg:mb-16 mb-4">
+        <p
+          className={`${
+            darkMode ? "teat-gray-200" : "text-gray-500"
+          } text-lg lg:text-xl lg:w-1/2 mx-6 lg:mx-auto py-6 lg:mb-16 mb-4`}
+        >
           Feel free to Contact me by submitting the form below and I will get
           back to you as soon as possible
         </p>
@@ -95,7 +101,9 @@ function Contact() {
           <input
             type="submit"
             value="SUBMIT"
-            className="rounded-md py-4 px-12  bg-lime-300 text-md lg:text-lg font-extrabold my-6 tracking-widest drop-shadow-xl"
+            className={`rounded-md py-4 px-12  bg-lime-300 text-md lg:text-lg font-extrabold my-6 tracking-widest ${
+              darkMode ? "shadow-none" : "drop-shadow-xl"
+            }`}
           />
         </form>
       </div>

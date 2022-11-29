@@ -9,11 +9,11 @@ let skills = [
   },
   {
     name: "JavaScript",
-    logo: "/images/js.png",
+    logo: "/images/js.svg",
   },
   {
     name: "Git",
-    logo: "/images/git.png",
+    logo: "/images/git.svg",
   },
   {
     name: "ReactJS",
@@ -21,11 +21,11 @@ let skills = [
   },
   {
     name: "Redux",
-    logo: "/images/redux.png",
+    logo: "/images/redux.svg",
   },
   {
     name: "NodeJS",
-    logo: "/images/node.png",
+    logo: "/images/node.svg",
   },
   {
     name: "Tailwind CSS",
@@ -33,25 +33,25 @@ let skills = [
   },
   {
     name: "SCSS/SASS",
-    logo: "/images/sass.png",
+    logo: "/images/sass.svg",
   },
 
   {
     name: "ExpressJS",
-    logo: "/images/express.png",
+    logo: "/images/express.svg",
   },
   {
     name: "MongoDB",
-    logo: "/images/mongo.png",
+    logo: "/images/mongo.svg",
   },
   {
     name: "Redis",
-    logo: "/images/redis.png",
+    logo: "/images/redis.svg",
   },
 
   {
     name: "EJS",
-    logo: "/images/ejs.png",
+    logo: "/images/ejs.svg",
   },
 ];
 export default skills;

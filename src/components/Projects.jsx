@@ -1,11 +1,19 @@
+import { useContext, useEffect } from "react";
+import ThemeContext from "../context/ThemeContext";
 import projects from "../projects";
 import SingleProject from "./SingleProject";
 
 function Projects() {
+  let { darkMode } = useContext(ThemeContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div
-        className="text-center lg:py-48 pt-32 pb-24 bg-no-repeat bg-cover relative"
+        className={`text-center lg:py-48 pt-32 ${
+          darkMode && "invert"
+        } pb-24 bg-no-repeat bg-cover relative`}
         id="hero"
         style={{ background: `url("/hero.jpg")` }}
       >
@@ -23,10 +31,12 @@ function Projects() {
           </p>
         </div>
       </div>
-      <div className="container mx-auto">
-        {projects.map((project) => (
-          <SingleProject key={project.name} {...project} />
-        ))}
+      <div className={`${darkMode && "dark"}`}>
+        <div className="container mx-auto">
+          {projects.map((project) => (
+            <SingleProject key={project.name} {...project} />
+          ))}
+        </div>
       </div>
     </>
   );
