@@ -34,10 +34,10 @@ function About() {
               }`}
             >
               I'm a FullStack Web Developer who likes to build things for the
-              web. I've been learning Full Stack Web development for quite some
-              time and during that period I've worked on few projects where I
-              implemented multiple web technologies to achieve responsive and
-              adaptive websites. Check out some of my work in the Projects
+              web. I've been learning Full Stack Web development for about six
+              months and during that period I've worked on many projects where
+              I've implemented multiple web technologies to achieve responsive
+              and adaptive websites. Check out some of my work in the Projects
               section.
             </p>
             <p

@@ -13,7 +13,7 @@ function SingleProject({
   let { darkMode } = useContext(ThemeContext);
   return (
     <div className=" flex flex-wrap justify-between lg:py-16 py-8">
-      <div className="lg:basis-1/2 px-6">
+      <div className="lg:basis-1/2 px-6 self-center">
         <img src={image} alt={name} className="w-full" />
       </div>
       <div className="self-center lg:px-16 px-8 text-center lg:text-left lg:basis-1/2 ">
@@ -41,7 +41,7 @@ function SingleProject({
               key={i}
               className={`${
                 darkMode ? "text-gray-200" : "text-gray-500"
-              } list-disc text-left `}
+              } list-disc text-justify `}
             >
               {feature}
             </li>
@@ -69,7 +69,7 @@ function SingleProject({
         </ul>
 
         <div className="flex justify-between items-center">
-          <a href={link} className="basis-2/5">
+          <a href={link} className="basis-2/5" rel="noreferrer" target="_blank">
             <button
               className={`rounded-md py-4 lg:py-5 lg:px-12 px-6 ${
                 darkMode ? "bg-violet-invert" : "bg-lime-300"
@@ -78,7 +78,12 @@ function SingleProject({
               LIVE LINK
             </button>
           </a>
-          <a href={gh_link} className="lg:basis-3/5 lg:mr-28 mr-8 ">
+          <a
+            href={gh_link}
+            className="lg:basis-3/5 lg:mr-28 mr-8"
+            rel="noreferrer"
+            target="_blank"
+          >
             <button
               className={`rounded-md py-3 flex items-center lg:px-6 px-4 text-white bg-black text-base font-extrabold my-4 lg:my-2 tracking-wide ${
                 darkMode ? "hover:text-violet-invert" : "hover:text-lime-400"

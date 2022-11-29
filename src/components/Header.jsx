@@ -11,31 +11,31 @@ function Header() {
         darkMode ? "dark" : "bg-white "
       } fixed left-0 right-0 z-10`}
     >
-      <header className="container mx-auto flex justify-between  items-center py-5 lg:py-6 px-4  ">
+      <header className="container mx-auto flex justify-between  items-center py-4 px-4  ">
         <a href="/" className="">
           <img
             src="/pic.jpg"
             alt="vishmallik"
-            className="w-10 h-10 rounded-full inline-block"
+            className="w-14 h-14 rounded-full inline-block"
           />
-          <h1 className="font-extrabold px-4 text-sm lg:text-md inline-block align-middle">
+          <h1 className="font-extrabold px-4 text-sm lg:text-lg inline-block align-middle tracking-widest">
             VISAWJEET MALLIK
           </h1>
         </a>
-        <nav className="lg:basis-1/3">
+        <nav className="lg:basis-2/5">
           {menu ? (
             <i
-              className="fas fa-xmark lg:hidden text-left"
+              className="fas fa-xmark lg:hidden text-left text-2xl"
               onClick={() => setMenu(false)}
             ></i>
           ) : (
             <i
-              className="fas fa-bars lg:hidden text-left"
+              className="fas fa-bars lg:hidden text-left text-2xl"
               onClick={() => setMenu(true)}
             ></i>
           )}
           <ul
-            className={`lg:flex lg:justify-between items-center basis-1/2 text-lg font-bold ${
+            className={`lg:flex lg:justify-between items-center text-lg font-bold ${
               menu
                 ? `flex flex-col ${
                     darkMode ? "bg-gray-900" : "bg-lime-100"
@@ -110,10 +110,19 @@ function Header() {
                 CONTACT
               </NavHashLink>
             </li>
+            <li
+              className={`${
+                darkMode ? "hover:text-violet-600" : "hover:text-lime-400"
+              } tracking-wide ${menu && "text-lg py-6"}`}
+            >
+              <a href="/resume.pdf" download>
+                RESUME <i className="fa-solid fa-download"></i>
+              </a>
+            </li>
             <li className={`${menu && "text-lg py-6 pb-10"}`}>
               {darkMode ? (
                 <i
-                  className="fas fa-sun w-10 cursor-pointer hover:text-violet-600 text-center block"
+                  className="fas fa-sun w-5 cursor-pointer hover:text-violet-600 text-center block"
                   onClick={() => {
                     setDarkMode(false);
                     setMenu(false);
@@ -121,7 +130,7 @@ function Header() {
                 ></i>
               ) : (
                 <i
-                  className="fas fa-moon w-10 cursor-pointer hover:text-lime-400 text-center block"
+                  className="fas fa-moon w-5 cursor-pointer hover:text-lime-400 text-center block"
                   onClick={() => {
                     setDarkMode(true);
                     setMenu(false);

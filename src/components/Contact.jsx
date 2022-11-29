@@ -1,4 +1,4 @@
-import { useContext, useReducer } from "react";
+import { useContext, useReducer, useState } from "react";
 import ThemeContext from "../context/ThemeContext";
 
 function reducer(state, action) {
@@ -30,7 +30,37 @@ function Contact() {
     message: "",
   });
   let { darkMode } = useContext(ThemeContext);
-
+  let [successMessage, setSuccessMessage] = useState("");
+  let [errorMessage, setErrorMessage] = useState("");
+  function handleSubmit(event) {
+    event.preventDefault();
+    let data = {
+      name: state.name,
+      email: state.email,
+      message: state.message,
+    };
+    if (state.name && state.email && state.message) {
+      fetch("https://getform.io/f/41413b57-2739-4fb5-bd90-8854b997d3c5", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          data.success
+            ? setSuccessMessage("Form Submitted Successfully!!!")
+            : setErrorMessage("Oops! Something Went Wrong...");
+          dispatch({ type: "name", payload: "" });
+          dispatch({ type: "email", payload: "" });
+          dispatch({ type: "message", payload: "" });
+        });
+    } else {
+      setErrorMessage("All field are required");
+    }
+  }
   return (
     <div
       style={{ background: "url('contact.jpg')" }}
@@ -51,10 +81,16 @@ function Contact() {
           back to you as soon as possible
         </p>
         <form
-          action="https://formsubmit.co/vishmallik@gmail.com"
-          method="POST"
           className="flex flex-col lg:w-1/2  mx-6 lg:mx-auto bg-white p-6 rounded-lg text-left"
+          onSubmit={handleSubmit}
         >
+          {errorMessage && (
+            <center className="text-red-500">{errorMessage}</center>
+          )}
+          {successMessage && (
+            <center className="text-green-500">{successMessage}</center>
+          )}
+
           <label htmlFor="name" className="mb-2 font-bold">
             Name
           </label>
@@ -65,23 +101,27 @@ function Contact() {
             value={state.name}
             placeholder="Your Name"
             className="bg-gray-200 rounded-md p-4"
-            onChange={({ target }) =>
-              dispatch({ type: "name", payload: target.value })
-            }
+            onChange={({ target }) => {
+              dispatch({ type: "name", payload: target.value });
+              setErrorMessage("");
+              setSuccessMessage("");
+            }}
           />
           <label htmlFor="name" className="mb-2 mt-6 font-bold">
             Email
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             value={state.email}
             placeholder="Your Email"
             className="bg-gray-200 rounded-md p-4"
-            onChange={({ target }) =>
-              dispatch({ type: "email", payload: target.value })
-            }
+            onChange={({ target }) => {
+              dispatch({ type: "email", payload: target.value });
+              setErrorMessage("");
+              setSuccessMessage("");
+            }}
           />
           <label htmlFor="name" className="mb-2 mt-6 font-bold">
             Message
@@ -94,9 +134,11 @@ function Contact() {
             value={state.message}
             id="message"
             placeholder="Your Message"
-            onChange={({ target }) =>
-              dispatch({ type: "message", payload: target.value })
-            }
+            onChange={({ target }) => {
+              dispatch({ type: "message", payload: target.value });
+              setErrorMessage("");
+              setSuccessMessage("");
+            }}
           />
           <input
             type="submit"
