@@ -124,7 +124,7 @@ function Header() {
                   className="fas fa-moon w-10 cursor-pointer hover:text-lime-400 text-center block"
                   onClick={() => {
                     setDarkMode(true);
-                    setMenu(true);
+                    setMenu(false);
                   }}
                 ></i>
               )}
