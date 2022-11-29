@@ -74,7 +74,7 @@ function Contact() {
         <hr className="border-2 border-solid border-lime-400 rounded-full w-16 mx-auto" />
         <p
           className={`${
-            darkMode ? "teat-gray-200" : "text-gray-500"
+            darkMode ? "text-gray-200" : "text-gray-500"
           } text-lg lg:text-xl lg:w-1/2 mx-6 lg:mx-auto py-6 lg:mb-16 mb-4`}
         >
           Feel free to Contact me by submitting the form below and I will get
