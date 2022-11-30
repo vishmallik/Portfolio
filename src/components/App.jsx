@@ -7,10 +7,15 @@ import ProjectSection from "./ProjectSection";
 import { BrowserRouter, Route } from "react-router-dom";
 import Projects from "./Projects";
 import ThemeContext from "../context/ThemeContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  let [darkMode, setDarkMode] = useState(false);
+  let [darkMode, setDarkMode] = useState(() => {
+    return JSON.parse(localStorage.getItem("darkMode") || false);
+  });
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode]);
   return (
     <div className="relative">
       <BrowserRouter>
