@@ -110,7 +110,7 @@ let projects = [
     ],
     details:
       "An expense tracker application made using Express & MongoDB where a logged in user can track their income, expenses and savings",
-    link: "https://expense-tracker-fbdd.onrender.com/",
+    link: "https://precious-gray-hem.cyclic.app/",
     gh_link: "https://github.com/vishmallik/Expense-Tracker",
     image: "/images/projects/trakr-mbp.png",
     tools: [
