@@ -14,7 +14,7 @@ function App() {
     return JSON.parse(localStorage.getItem("darkMode") || false);
   });
   useEffect(() => {
-    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    localStorage.setItem("darkMode", darkMode);
   }, [darkMode]);
   return (
     <div className="relative">
