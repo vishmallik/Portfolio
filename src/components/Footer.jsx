@@ -79,7 +79,7 @@ function Footer() {
         </div>
         <hr className="border-thin border-neutral-500 border-solid" />
         <small className="text-center text-xs lg:text-sm block lg:pt-10 pt-4 tracking-widest">
-          &copy; Copyright 2022, Made by Visawjeet Mallik
+          &copy; Copyright 2024, Made by Visawjeet Mallik
         </small>
         <small className="text-center text-xs lg:text-sm block lg:pb-10 pb-4 pt-4 tracking-widest">
           Made using

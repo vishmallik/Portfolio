@@ -15,6 +15,11 @@ function Hero() {
       }}
     >
       <div className="container mx-auto">
+        <img
+          src="/pic.jpg"
+          alt="Visawjeet Mallik"
+          className={`w-72 my-10 mx-auto rounded-full ${darkMode && "invert"}`}
+        />
         <h1 className="font-extrabold lg:text-6xl text-5xl tracking-widest">
           <strong className="text-lime-400">HI,</strong> I AM VISAWJEET MALLIK
         </h1>
@@ -22,15 +27,14 @@ function Hero() {
           A Full Stack Web Developer
         </h2>
         <p className="lg:w-3/4  mx-4 lg:mx-auto text-lg lg:text-xl tracking-wide">
-          Proficient in MERN stack development, passionate about implementing
-          and launching new projects, I have the ability to translate business
-          requirements into technical solutions. Currently I am looking to start
-          my career as an entry-level software engineer with a reputed firm
-          driven by technology.
+          I am proficient in MERN stack development and passionate about
+          implementing and launching new projects. With a strong ability to
+          translate business requirements into technical solutions, I am seeking
+          an opportunity that will help me grow and further develop my skills
         </p>
         <HashLink to="/#projects" smooth>
           <button
-            className={`rounded-md py-4 px-12 bg-lime-300 text-md lg:text-lg font-extrabold my-16 tracking-widest ${
+            className={`rounded-md py-4 px-12 bg-lime-300 text-md lg:text-lg font-extrabold my-16 tracking-widest hover:bg-lime-400 ${
               darkMode ? "shadow-none" : "drop-shadow-xl"
             }`}
           >
@@ -45,17 +49,19 @@ function Hero() {
         <a href="https://www.linkedin.com/in/vishmallik">
           <i className="fab fa-linkedin text-4xl px-2 hover:text-lime-400 cursor-pointer my-2"></i>
         </a>
-        <svg
-          className="fill-black hover:fill-lime-400 inline-block mx-2  cursor-pointer my-2 w-9 h-9 "
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM23.9639 26.0193L14.9987 19.5115V33.23H13.5009C12.6664 33.23 12.0031 32.5667 12.0031 31.7322V16.562C12.0031 16.4985 12.007 16.4389 12.0144 16.3831C12.0416 16.1451 12.1284 15.9122 12.2813 15.7061C12.7734 15.0428 13.7363 14.893 14.421 15.3851L23.9853 22.3391L33.6138 15.2996C34.2771 14.8074 35.2186 14.9572 35.7107 15.6419C35.9723 15.9945 36.0525 16.4256 35.9674 16.8261V31.7536C35.9674 32.5667 35.3041 33.23 34.4697 33.23H32.9719V19.4788L23.9639 26.0193Z"
-          />
-        </svg>
+        <a href="mailto:vishmallik@gmail.com">
+          <svg
+            className="fill-black hover:fill-lime-400 inline-block mx-2  cursor-pointer my-2 w-9 h-9 "
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM23.9639 26.0193L14.9987 19.5115V33.23H13.5009C12.6664 33.23 12.0031 32.5667 12.0031 31.7322V16.562C12.0031 16.4985 12.007 16.4389 12.0144 16.3831C12.0416 16.1451 12.1284 15.9122 12.2813 15.7061C12.7734 15.0428 13.7363 14.893 14.421 15.3851L23.9853 22.3391L33.6138 15.2996C34.2771 14.8074 35.2186 14.9572 35.7107 15.6419C35.9723 15.9945 36.0525 16.4256 35.9674 16.8261V31.7536C35.9674 32.5667 35.3041 33.23 34.4697 33.23H32.9719V19.4788L23.9639 26.0193Z"
+            />
+          </svg>
+        </a>
         <a href="https://www.twitter.com/vishmallik">
           <i className="fab fa-twitter text-4xl px-2 hover:text-lime-400 cursor-pointer my-2"></i>
         </a>

@@ -45,6 +45,10 @@ let skills = [
     logo: "/images/mongo.svg",
   },
   {
+    name: "PostgreSQL",
+    logo: "/images/postgresql.svg",
+  },
+  {
     name: "Redis",
     logo: "/images/redis.svg",
   },

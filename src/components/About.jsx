@@ -33,12 +33,19 @@ function About() {
                 darkMode ? "text-slate-200" : "text-slate-500"
               }`}
             >
-              I'm a FullStack Web Developer who likes to build things for the
-              web. I've been learning Full Stack Web development for about six
-              months and during that period I've worked on many projects where
-              I've implemented multiple web technologies to achieve responsive
-              and adaptive websites. Check out some of my work in the Projects
-              section.
+              I am a Full Stack Web Developer with 1.6 years of experience
+              specializing in React, Node.js, Express, and PostgreSQL. I enjoy
+              building things for the web, and during my time in web
+              development, I have worked on numerous projects implementing a
+              variety of web technologies to create responsive and adaptive
+              websites and applications.
+            </p>
+            <p
+              className={`text-md lg:text-lg tracking-wide py-2 ${
+                darkMode ? "text-slate-200" : "text-slate-500"
+              }`}
+            >
+              Check out some of my work in the Projects section.
             </p>
             <p
               className={`text-md lg:text-lg tracking-wide py-2 ${
@@ -70,9 +77,9 @@ function About() {
                 darkMode ? "text-slate-200" : "text-slate-500"
               }`}
             >
-              I'm open to Job opportunities where I can contribute, learn and
-              grow. If you have a good opportunity that matches my skills and
-              experience then don't hesitate to contact me.
+              I am open to job opportunities where I can contribute, learn, and
+              grow. If you have a fitting opportunity that matches my skills and
+              experience, please don't hesitate to contact me.
             </p>
             <HashLink to="/#contact" smooth>
               <button
